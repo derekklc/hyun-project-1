@@ -44,6 +44,7 @@ const tabContentLeftSideBar = () => {
             <img
               height={200}
               width={100}
+              key={imgPath}
               src={fullPath}
               className={styles['tab-side-bar-img']}
             />

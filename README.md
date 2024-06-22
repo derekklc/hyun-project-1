@@ -74,3 +74,5 @@ It will show tasks that you can run with Nx.
 9. Internationalisation
 10. Database
 11.
+
+Stack: monorepo, React, TS, NX, CSS, SCSS, Material UI, styled component, styled jsx, micro-frontend, webpack, optimisation, file splitting, aws S3, Next JS, FireBase?, internationalisation, git.

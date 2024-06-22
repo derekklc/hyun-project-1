@@ -3,9 +3,12 @@ import styled from 'styled-components';
 import Header from '../components/header/header';
 import SearchBar from '../components/search-bar/search-bar';
 import BodyTabs from '../components/body-tabs/body-tabs';
+import Footer from '../components/footer/footer';
+import './global.css';
 
 const StyledApp = styled.div`
   color: #393a4b;
+  font-family: Arial, Helvetica, sans-serif;
 `;
 
 const StyledBodyContainer = styled.div`
@@ -23,6 +26,7 @@ export function App() {
         <BodyTabs />
       </StyledBodyContainer>
       {/* <NxWelcome title="hyun-project-1" /> */}
+      <Footer />
     </StyledApp>
   );
 }
