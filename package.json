@@ -5,11 +5,12 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@types/styled-jsx": "^3.4.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-is": "18.3.1",
     "styled-components": "5.3.6",
-    "styled-jsx": "5.1.2",
+    "styled-jsx": "^5.1.6",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

@@ -1,3 +1,5 @@
+import jsx from 'styled-jsx';
+
 export function ServicesPage() {
   return (
     <div>

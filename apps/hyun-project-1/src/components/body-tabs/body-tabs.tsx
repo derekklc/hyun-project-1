@@ -1,24 +1,78 @@
 import styles from './body-tabs.module.scss';
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { TabIDs } from '../../enums';
 import { TabNames } from '../../constants';
+import ServicesPage from '../../pages/services-page/services-page';
 
-const tabNamesArray = Object.keys(TabIDs).map((id) => {
-  return TabNames[TabIDs[id as keyof typeof TabIDs]] || '';
-});
+// import melbPic1 from '../../images/melb-pic-1.jpg';
+
+// const tabNamesArray = Object.keys(TabIDs).map((id) => {
+//   return TabNames[TabIDs[id as keyof typeof TabIDs]] || '';
+// });
 
 const tabTitles = (name: string, updateTab: (name: TabIDs) => void) => {
   return (
     <div className={styles['tab-titles-container']}>
-      {tabNamesArray.map((item) => {
+      {Object.values(TabIDs).map((item) => {
+        const tabName = TabNames[item];
         return (
           <button
             className={styles['tab-title-button']}
             key={item}
             onClick={() => updateTab(item as TabIDs)}
           >
-            {item}
+            {tabName}
           </button>
+        );
+      })}
+    </div>
+  );
+};
+const tabContentLeftSideBar = () => {
+  const imgArray = ['melb-pic-1.jpg', 'melb-pic-2.jpeg'];
+  return (
+    <div className={styles['tab-side-bar-container']}>
+      {imgArray.map((imgPath) => {
+        let fullPath = '';
+        try {
+          fullPath = require(`../../images/${imgPath}`);
+        } catch {
+          return <></>;
+        }
+        return (
+          fullPath && (
+            <img
+              height={200}
+              width={100}
+              src={fullPath}
+              className={styles['tab-side-bar-img']}
+            />
+          )
+        );
+      })}
+    </div>
+  );
+};
+const tabContentRightSideBar = () => {
+  const imgArray = ['melb-pic-3.jpg', 'melb-pic-4.webp'];
+  return (
+    <div className={styles['tab-side-bar-container']}>
+      {imgArray.map((imgPath) => {
+        let fullPath = '';
+        try {
+          fullPath = require(`../../images/${imgPath}`);
+        } catch {
+          return <></>;
+        }
+        return (
+          fullPath && (
+            <img
+              height={200}
+              width={100}
+              src={fullPath}
+              className={styles['tab-side-bar-img']}
+            />
+          )
         );
       })}
     </div>
@@ -26,7 +80,15 @@ const tabTitles = (name: string, updateTab: (name: TabIDs) => void) => {
 };
 
 const tabPage = (name: string) => {
-  return <div>{name}</div>;
+  const getTabContent = () => {
+    switch (name) {
+      case TabIDs.SERVICES:
+        return <ServicesPage />;
+      default:
+        return <div>{name}</div>;
+    }
+  };
+  return <div className={styles['tab-content']}>{getTabContent()}</div>;
 };
 
 export function BodyTabs() {
@@ -37,7 +99,11 @@ export function BodyTabs() {
   return (
     <div className={styles['container']}>
       {tabTitles(tabName, updateTabName)}
-      {tabPage(tabName)}
+      <div className={styles['tab-area-container']}>
+        {tabContentLeftSideBar()}
+        {tabPage(tabName)}
+        {/* {tabContentRightSideBar()} */}
+      </div>
     </div>
   );
 }
