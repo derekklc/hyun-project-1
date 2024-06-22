@@ -60,3 +60,17 @@ It will show tasks that you can run with Nx.
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+## Todo list
+
+1. Create React MonoRepo
+2. Create Main Website App
+3. Mock front page
+4. Create services page
+5. Login and Sign up
+6. Modularise Packages
+7. Domain & Deployment
+8. Next JS
+9. Internationalisation
+10. Database
+11.

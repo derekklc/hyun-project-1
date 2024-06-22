@@ -1,15 +1,28 @@
 import styled from 'styled-components';
-
-import NxWelcome from './nx-welcome';
+// import NxWelcome from './nx-welcome';
+import Header from '../components/header/header';
+import SearchBar from '../components/search-bar/search-bar';
+import BodyTabs from '../components/body-tabs/body-tabs';
 
 const StyledApp = styled.div`
-  // Your style here
+  color: #393a4b;
+`;
+
+const StyledBodyContainer = styled.div`
+  width: 70%;
+  min-width: 480px;
+  margin: auto;
 `;
 
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="hyun-project-1" />
+      <Header />
+      <StyledBodyContainer>
+        <SearchBar />
+        <BodyTabs />
+      </StyledBodyContainer>
+      {/* <NxWelcome title="hyun-project-1" /> */}
     </StyledApp>
   );
 }

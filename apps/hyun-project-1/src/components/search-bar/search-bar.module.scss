@@ -1,0 +1,23 @@
+.container {
+  border-bottom: 1px solid whitesmoke;
+}
+.inner-container {
+  display: flex;
+  gap: 10px;
+  padding-block: 10px;
+  //   width: 70%;
+  //   min-width: 480px;
+  margin: auto;
+}
+.logo-container {
+  height: 40px;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+.search-box {
+  height: 40px;
+  min-width: 240px;
+  border: 2px solid skyblue;
+}
