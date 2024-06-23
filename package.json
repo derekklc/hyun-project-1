@@ -6,6 +6,8 @@
   "private": true,
   "dependencies": {
     "@types/styled-jsx": "^3.4.4",
+    "dotenv": "^16.4.5",
+    "firebase": "^10.12.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-is": "18.3.1",
