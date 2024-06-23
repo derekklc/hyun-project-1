@@ -3,14 +3,13 @@
 }
 .inner-container {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   padding-block: 10px;
-  //   width: 70%;
-  //   min-width: 480px;
   margin: auto;
 }
 .logo-container {
   height: 40px;
+  cursor: pointer;
   svg {
     height: 100%;
     width: 100%;
@@ -18,6 +17,9 @@
 }
 .search-box {
   height: 40px;
-  min-width: 240px;
-  border: 2px solid skyblue;
+  min-width: 280px;
+  width: 100%;
+  border: 1px solid skyblue;
+  padding: 0 10px;
+  border-radius: 4px;
 }

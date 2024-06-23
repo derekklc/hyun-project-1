@@ -3,6 +3,7 @@ import { ReactElement, useState } from 'react';
 import { TabIDs } from '../../enums';
 import { TabNames } from '../../constants';
 import ServicesPage from '../../pages/services-page/services-page';
+import SignupPage from '../../pages/signup-page/signup-page';
 
 // import melbPic1 from '../../images/melb-pic-1.jpg';
 
@@ -83,6 +84,8 @@ const tabContentRightSideBar = () => {
 const tabPage = (name: string) => {
   const getTabContent = () => {
     switch (name) {
+      case TabIDs.NEWS:
+        return <div>{name}</div>;
       case TabIDs.SERVICES:
         return <ServicesPage />;
       default:

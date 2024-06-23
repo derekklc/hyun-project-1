@@ -59,7 +59,7 @@ const LoginButton = styled.button`
   cursor: pointer;
 `;
 
-export function LoginPage() {
+export function SignupPage() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -76,7 +76,7 @@ export function LoginPage() {
   };
   return (
     <Container>
-      <StyledTitle>Sign In</StyledTitle>
+      <StyledTitle>Sign Up</StyledTitle>
       <StyledForm>
         <CellContainer>
           <label htmlFor="email">Email</label>
@@ -98,14 +98,24 @@ export function LoginPage() {
             onChange={handleChange}
           />
         </CellContainer>
-        <SubmitButton type="submit">Sign in</SubmitButton>
+        <CellContainer>
+          <label htmlFor="password">Confirm Password</label>
+          <StyledTextInput
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+          />
+        </CellContainer>
+        <SubmitButton type="submit">Sign Up</SubmitButton>
         <LoginPrompt>
-          <span>Don't have an account yet?</span>
-          <LoginButton>Sign up.</LoginButton>
+          <span>Already has an account?</span>
+          <LoginButton>Log in.</LoginButton>
         </LoginPrompt>
       </StyledForm>
     </Container>
   );
 }
 
-export default LoginPage;
+export default SignupPage;
